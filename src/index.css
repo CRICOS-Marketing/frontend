@@ -14,7 +14,7 @@
 .hero-background {
   background-color: #000000;
   min-height: 100vh;
-  display: grid;
+  display: flex;
   place-items: center;
 }
 

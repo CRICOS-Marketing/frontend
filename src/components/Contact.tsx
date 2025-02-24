@@ -5,7 +5,7 @@ const Contact = () => {
         <h2 className="text-3xl sm:text-4xl font-semibold mb-8">Contact Us</h2>
 
         {/* Contact Info */}
-        <div className="contact-info bg-[#1f2a34] p-8 rounded-lg shadow-lg">
+        <div className="contact-info border border-gray-400 bg-[#1f2a34] p-8 rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold text-[#d1d9e6] mb-4">CRICOS Marketing Pty LTD</h3>
           
           <p className="text-lg sm:text-xl mb-4 text-[#e1e1e1]">

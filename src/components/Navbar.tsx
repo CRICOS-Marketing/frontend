@@ -39,8 +39,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo and title */}
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <div className="logo-bg"></div> {/* Add your logo styling here */}
-          <span className="self-center text-2xl font-bold whitespace-nowrap text-white">
+          <div className="logo-bg"></div> {/* Logo styling here */}
+          <span className="self-center text-xl font-bold whitespace-nowrap text-white">
             CRICOS Marketing
           </span>
         </Link>
@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <Link to="https://linkedin.com" target="_blank">
             <button
               type="button"
-              className="text-white bg-[#1f2a34] focus:outline-none font-medium rounded-2xl text-sm px-4 py-3 text-center border"
+              className="text-white bg-[#161d24] focus:outline-none font-medium rounded-2xl text-sm px-4 py-3 text-center"
             >
               About Us
             </button>
@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           {/* Mobile menu toggle */}
           <button
             type="button"
-            className="menu-toggle inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="menu-toggle text-white inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
           >
@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } items-center justify-center border border-gray-300 rounded-lg w-full md:flex md:w-auto md:order-1`}
+          } items-center justify-center border pt-5 text-white border-gray-300 rounded-lg w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
           <ul className="flex flex-col w-full p-2 mt-4 font-medium border border-gray-500 rounded-lg bg-slate-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent md:justify-center">
