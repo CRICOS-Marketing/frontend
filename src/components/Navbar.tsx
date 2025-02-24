@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           <Link to="https://linkedin.com" target="_blank">
             <button
               type="button"
-              className="text-white bg-[#161d24] focus:outline-none font-medium rounded-2xl text-sm px-4 py-3 text-center"
+              className="text-white bg-[#161d24] focus:outline-none font-medium rounded-2xl text-sm px-4 py-3 text-center border border-gray-700"
             >
               About Us
             </button>
