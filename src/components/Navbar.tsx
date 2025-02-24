@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";

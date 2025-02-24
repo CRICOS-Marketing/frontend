@@ -1,6 +1,3 @@
-// src/components/Services.js
-import React from 'react';
-
 const servicesData = [
   {
     title: 'Sales & Marketing',

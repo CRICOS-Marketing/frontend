@@ -1,6 +1,3 @@
-// src/components/Consulting.js
-import React from 'react';
-
 const Consulting = () => {
   return (
     <section id="consulting" className="py-20 px-4 bg-gray-100">

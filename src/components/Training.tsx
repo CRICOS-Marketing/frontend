@@ -1,6 +1,3 @@
-// src/components/Training.js
-import React from 'react';
-
 const Training = () => {
   return (
     <section id="training" className="py-20 px-4 bg-gradient-to-r from-[#222b3a] to-[#1f2a34]">
