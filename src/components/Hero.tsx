@@ -4,14 +4,14 @@ const Hero = () => {
       id="home"
       className="hero-background py-32 px-6 relative text-white"
       style={{
-        backgroundImage: 'url("/src/assets/hero.jpg")',
+        backgroundImage: 'url("/hero.svg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <div className="container mx-auto text-center relative z-10">
         {/* Glass Effect Container */}
-        <div className="glass-container p-8 rounded-xl backdrop-blur-sm bg-[#222b3a]">
+        <div className="glass-container border border-gray-400 p-8 rounded-xl backdrop-blur-sm bg-[#222b3a]">
           {/* Main Heading */}
           <h1 className="maintitle text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6">
             CRICOS Marketing: Transforming Business Potential
