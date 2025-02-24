@@ -13,7 +13,7 @@ const Hero = () => {
         {/* Glass Effect Container */}
         <div className="glass-container border border-gray-400 p-8 rounded-xl backdrop-blur-sm bg-[#222b3a]">
           {/* Main Heading */}
-          <h1 className="maintitle text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight mb-6">
+          <h1 className="maintitle text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6">
             CRICOS Marketing: Transforming Business Potential
           </h1>
           

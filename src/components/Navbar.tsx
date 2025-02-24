@@ -72,7 +72,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } items-center justify-center border pt-5 text-white border-gray-300 rounded-lg w-full md:flex md:w-auto md:order-1`}
+          } items-center justify-center border text-white border-gray-300 rounded-lg w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
           <ul className="flex flex-col w-full p-2 mt-4 font-medium border border-gray-500 rounded-lg bg-slate-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent md:justify-center">
