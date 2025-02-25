@@ -1,9 +1,6 @@
 [build]
   command = "npm ci && npm run build"
-
-  # Directory to deploy
-  publish = "dist"  # This should be the folder where Vite builds the app
-
+  publish = "dist"
 
 [[plugins]]
-  package = "@netlify/plugin-vite"
+  package = "vite-plugin-netlify"
