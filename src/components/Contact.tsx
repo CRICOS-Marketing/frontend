@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaBusinessTime } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -84,7 +84,7 @@ const Contact = () => {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
           >
             <div className="flex items-center mb-4">
-              <FaPhoneAlt className="text-4xl text-[#ffa175] mr-4" />
+              <FaBusinessTime className="text-4xl text-[#ffa175] mr-4" />
               <h3 className="text-xl font-semibold text-black">ABN</h3>
             </div>
             <p className="text-lg sm:text-xl font-medium text-black">
