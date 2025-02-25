@@ -4,9 +4,6 @@
   # Directory to deploy
   publish = "dist"  # This should be the folder where Vite builds the app
 
-  environment = { 
-    NODE_ENV = "production" 
-  }
 
 [[plugins]]
   package = "@netlify/plugin-vite"
