@@ -1,33 +1,106 @@
+import { useState, useEffect } from "react";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const Contact = () => {
+  const [inView, setInView] = useState(false);
+
+  const observerOptions: IntersectionObserverInit = {
+    rootMargin: "0px",
+    threshold: 0.5, // 50% of the element must be visible to trigger the animation
+  };
+
+  const handleObserver = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setInView(true);
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleObserver, observerOptions);
+    const elements = document.querySelectorAll(".contact-card");
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-r from-[#222b3a] to-[#1f2a34] text-white">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-semibold mb-8">Contact Us</h2>
+    <section id="contact" className="py-20 px-4 bg-[#a6a6a6] text-white">
+      <div className="container mx-auto" style={{ fontFamily: "Lexend Deca" }}>
+        <h2 className="text-3xl text-center font-semibold text-black mb-8">
+          Contact Us
+        </h2>
 
         {/* Contact Info */}
-        <div className="contact-info border border-gray-400 bg-[#1f2a34] p-8 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-[#d1d9e6] mb-4">CRICOS Marketing Pty LTD</h3>
-          
-          <p className="text-lg sm:text-xl mb-4 text-[#e1e1e1]">
-            Suite 2, 38 Railway Pde, Lakemba, NSW 2195
-          </p>
-          
-          <p className="text-lg sm:text-xl mb-4 text-[#e1e1e1]">
-            <span className="font-semibold">Email: </span> 
-            <a href="mailto:cricosmarketing.sydney@gmail.com" className="text-[#58a6f8] hover:underline">
-              cricosmarketing.sydney@gmail.com
-            </a>
-          </p>
-          
-          <p className="text-lg sm:text-xl mb-4 text-[#e1e1e1]">
-            <span className="font-semibold">ABN:</span> 93 615 746 426
-          </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Address */}
+          <motion.div
+            className="contact-card p-6 bg-white border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out"
+            initial={{ opacity: 0, y: 30 }} // Start below (y: 30)
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }} // Slide up from bottom
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <div className="flex items-center mb-4">
+              <FaMapMarkerAlt className="text-4xl text-[#ffa175] mr-4" />
+              <h3 className="text-xl font-semibold text-black">Address</h3>
+            </div>
+            <p className="text-lg sm:text-xl font-medium text-black">
+              <b>Suite 2, 38 Railway Pde, Lakemba, NSW 2195</b>
+            </p>
+          </motion.div>
+
+          {/* Email */}
+          <motion.div
+            className="contact-card p-6 bg-white border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out"
+            initial={{ opacity: 0, y: 30 }} // Start below (y: 30)
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }} // Slide up from bottom
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          >
+            <div className="flex items-center mb-4">
+              <FaEnvelope className="text-4xl text-[#ffa175] mr-4" />
+              <h3 className="text-xl font-semibold text-black">Email</h3>
+            </div>
+            <p className="text-lg sm:text-xl font-medium text-black">
+              <b>
+                <a
+                  href="mailto:rrsharif999@gmail.com"
+                  className="text-[#58a6f8] hover:underline"
+                >
+                  rrsharif999@gmail.com
+                </a>
+              </b>
+            </p>
+          </motion.div>
+
+          {/* ABN */}
+          <motion.div
+            className="contact-card p-6 bg-white border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out"
+            initial={{ opacity: 0, y: 30 }} // Start below (y: 30)
+            animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }} // Slide up from bottom
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+          >
+            <div className="flex items-center mb-4">
+              <FaPhoneAlt className="text-4xl text-[#ffa175] mr-4" />
+              <h3 className="text-xl font-semibold text-black">ABN</h3>
+            </div>
+            <p className="text-lg sm:text-xl font-medium text-black">
+              <b>93 615 746 426</b>
+            </p>
+          </motion.div>
         </div>
 
-        {/* Contact Button */}
-        <button className="bg-slate-900 hover:bg-[#293c4d] px-6 py-3 rounded-lg text-white font-semibold text-lg transition duration-300 ease-in-out mt-8">
-          Get in Touch
-        </button>
+        {/* Drop us a mail */}
+        <div className="flex justify-center mt-8">
+          <a href="mailto:rrsharif999@gmail.com">
+            <button className="bg-[#ffa175] hover:bg-white border border-gray-400 px-8 py-4 rounded-3xl text-black font-semibold text-md md:text-lg transition duration-300 ease-in-out">
+              Drop Us a Mail
+            </button>
+          </a>
+        </div>
       </div>
     </section>
   );
