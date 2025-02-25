@@ -77,12 +77,12 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           } items-center justify-center bg-[#ffa175] border text-black border-black rounded-lg w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col text-white w-full p-2 mt-4 font-medium border border-gray-500 rounded-lg bg-slate-900 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent md:justify-center">
+          <ul className="flex flex-col text-black w-full p-2 mt-4 font-medium border border-gray-500 rounded-lg bg-white md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent md:justify-center">
             {navItems.map((navItem, idx) => (
               <li key={idx} className="w-full">
                 <a
                   href={navItem.link}
-                  className="block font-bold py-2 px-3 text-left rounded-xl hover:bg-gray-100 md:hover:bg-[#e2dddc] md:hover:text-white md:text-white hover:bg-[#e2dddc]"
+                  className="block font-bold py-2 px-3 text-left rounded-xl hover:bg-gray-100 md:hover:bg-[#e2dddc] md:hover:text-black md:text-black hover:bg-[#e2dddc]"
                 >
                   {navItem.name}
                 </a>
