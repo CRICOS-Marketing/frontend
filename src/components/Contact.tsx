@@ -67,10 +67,10 @@ const Contact = () => {
             <p className="text-lg sm:text-xl font-medium text-black">
               <b>
                 <a
-                  href="mailto:rrsharif999@gmail.com"
+                  href="mailto:cricosmarketing.sydney@gmail.com"
                   className="text-[#58a6f8] hover:underline"
                 >
-                  rrsharif999@gmail.com
+                  cricosmarketing.sydney@gmail.com
                 </a>
               </b>
             </p>
@@ -95,7 +95,7 @@ const Contact = () => {
 
         {/* Drop us a mail */}
         <div className="flex justify-center mt-8">
-          <a href="mailto:rrsharif999@gmail.com">
+          <a href="mailto:cricosmarketing.sydney@gmail.com">
             <button className="bg-[#ffa175] hover:bg-white border border-gray-400 px-8 py-4 rounded-3xl text-black font-semibold text-md md:text-lg transition duration-300 ease-in-out">
               Drop Us a Mail
             </button>

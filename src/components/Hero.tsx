@@ -119,7 +119,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
         >
-          <a href="mailto:rrsharif999@gmail.com">
+          <a href="mailto:cricosmarketing.sydney@gmail.com">
             <button className="bg-[#ffa175] hover:bg-white border border-gray-400 px-8 py-4 rounded-3xl text-black font-semibold text-md md:text-lg transition duration-300 ease-in-out">
               Get In Touch
             </button>

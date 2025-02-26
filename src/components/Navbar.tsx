@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
 
         {/* Buttons and menu toggle */}
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <a href="mailto:rrsharif999@gmail.com">
+          <a href="mailto:cricosmarketing.sydney@gmail.com">
             <button
               type="button"
               className="text-black bg-[#ffa175] focus:outline-none font-medium rounded-2xl text-md px-4 py-3 text-center border border-gray-700 hover:bg-white"
